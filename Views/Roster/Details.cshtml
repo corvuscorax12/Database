@@ -1,0 +1,37 @@
+﻿@model Database.Models.RosterModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>RosterModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.semester_id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.semester_id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.staff_id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.staff_id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.role_id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.role_id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.roster_id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

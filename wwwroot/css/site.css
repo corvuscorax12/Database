@@ -20,3 +20,34 @@ html {
 body {
   margin-bottom: 60px;
 }
+    body img {
+    }
+
+.filter-blur {
+    filter: blur(6px);
+}
+
+.jumbotron {
+    z-index: 2;
+    opacity: 0.79;
+    padding-top: 0px;
+    margin-top: 27vh;
+    border-style: solid;
+    border-width: thick;
+    border-spacing: 0px 0px;
+    text-align: center;
+    text-shadow: 0px 0px #DB1F22;
+    background-color: #222222;
+    color: #FFFFFF;
+    clear: none;
+    font-style: oblique;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 900;
+}
+
+.modal-backdrop.filter-blur {
+    z-index: -2;
+    float: right;
+    text-shadow: 0px 0px 0px;
+    opacity: 1;
+}

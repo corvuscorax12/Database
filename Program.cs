@@ -32,8 +32,11 @@ namespace Database
                 options.Password.RequiredLength = 3;
             });
 
-           
 
+            builder.Services.ConfigureApplicationCookie(config =>
+            {
+                config.LoginPath = "/Identity/Account/Login";
+            });
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -47,7 +50,7 @@ namespace Database
             {
                 ForwardedHeaders = Microsoft.AspNetCore.HttpOverrides.ForwardedHeaders.XForwardedProto
             });
-       //     app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseRouting();
             app.UseAuthentication();

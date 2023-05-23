@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Database.Controllers
 {
+    [Authorize]
     public class StaffController : Controller
     {
         SignInManager<UserModel>? SignInManager;
@@ -29,6 +30,7 @@ namespace Database.Controllers
         public async Task<IActionResult> Index()
         {
             
+
                 return _context.Staff != null ?
                             View(await _context.Staff.ToListAsync()) :
                           Problem("Entity set 'ArchivalContext.Staff'  is null.");

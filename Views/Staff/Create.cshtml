@@ -3,7 +3,13 @@
 @{
     ViewData["Title"] = "Create";
 }
-
+@inject SignInManager<UserModel> SignInManager
+@using Microsoft.AspNetCore.Identity;
+@if (!SignInManager.IsSignedIn(User))
+{
+    <p>Please Sign In</p>
+    <a class="nav-link text-dark" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>
+}
 <h1>Create</h1>
 
 <h4>Add New Staff</h4>
